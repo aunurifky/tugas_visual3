@@ -71,7 +71,7 @@ object Form1: TForm1
     Top = 224
     Width = 75
     Height = 25
-    Caption = 'LOGIN'
+    Caption = 'KELAS'
     TabOrder = 2
     OnClick = btn1Click
   end

@@ -57,7 +57,7 @@ begin
       begin
         // Pengguna berhasil login sebagai admin
         ShowMessage('Admin login successful');
-        Form3.Show;
+        Form2.Show;
       end;
     end
     else

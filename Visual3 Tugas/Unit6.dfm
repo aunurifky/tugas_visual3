@@ -1,9 +1,9 @@
-object Form4: TForm4
-  Left = 195
-  Top = 130
+object Form6: TForm6
+  Left = 192
+  Top = 125
   Width = 928
   Height = 480
-  Caption = 'Form4'
+  Caption = 'Form6'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,6 @@ object Form4: TForm4
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object l2: TLabel
@@ -21,11 +20,11 @@ object Form4: TForm4
     Height = 13
   end
   object l1: TLabel
-    Left = 172
-    Top = 28
-    Width = 57
+    Left = 204
+    Top = 20
+    Width = 13
     Height = 15
-    Caption = 'ID KELAS'
+    Caption = 'ID'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -34,11 +33,11 @@ object Form4: TForm4
     ParentFont = False
   end
   object l4: TLabel
-    Left = 168
-    Top = 100
-    Width = 57
+    Left = 200
+    Top = 92
+    Width = 64
     Height = 16
-    Caption = 'JURUSAN'
+    Caption = 'SEMESTER'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -47,11 +46,37 @@ object Form4: TForm4
     ParentFont = False
   end
   object I_3: TLabel
-    Left = 168
+    Left = 200
     Top = 60
-    Width = 83
+    Width = 24
     Height = 16
-    Caption = 'NAMA KELAS'
+    Caption = 'NIM'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object I_1: TLabel
+    Left = 200
+    Top = 124
+    Width = 79
+    Height = 16
+    Caption = 'JUMLAH SKS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object I_2: TLabel
+    Left = 200
+    Top = 164
+    Width = 21
+    Height = 16
+    Caption = 'IPK'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -71,21 +96,30 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnCellClick = dbgrd1CellClick
     Columns = <
       item
         Expanded = False
-        FieldName = 'id_kelas'
+        FieldName = 'id'
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'nama_kelas'
+        FieldName = 'nim'
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'jurusan'
+        FieldName = 'semester'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jumlah_sks'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ipk'
         Visible = True
       end>
   end
@@ -123,7 +157,6 @@ object Form4: TForm4
     Height = 33
     Caption = 'Hapus'
     TabOrder = 4
-    OnClick = b4Click
   end
   object b5: TButton
     Left = 540
@@ -132,7 +165,6 @@ object Form4: TForm4
     Height = 33
     Caption = 'Batal'
     TabOrder = 5
-    OnClick = b5Click
   end
   object b6: TButton
     Left = 644
@@ -141,28 +173,41 @@ object Form4: TForm4
     Height = 33
     Caption = 'Print'
     TabOrder = 6
-    OnClick = b6Click
   end
   object e_1: TEdit
-    Left = 320
+    Left = 360
     Top = 24
     Width = 113
     Height = 21
     TabOrder = 7
   end
-  object e_4: TEdit
-    Left = 320
-    Top = 100
+  object e_3: TEdit
+    Left = 360
+    Top = 92
     Width = 113
     Height = 21
     TabOrder = 8
   end
   object e_2: TEdit
-    Left = 320
+    Left = 360
     Top = 60
     Width = 113
     Height = 21
     TabOrder = 9
+  end
+  object e_4: TEdit
+    Left = 360
+    Top = 124
+    Width = 113
+    Height = 21
+    TabOrder = 10
+  end
+  object e_5: TEdit
+    Left = 360
+    Top = 164
+    Width = 113
+    Height = 21
+    TabOrder = 11
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -182,13 +227,12 @@ object Form4: TForm4
   end
   object zqry1: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
-      'select * from kelas'
+      'select * from khs'
       ''
       '')
     Params = <>
-    DataSource = Form3.ds1
+    DataSource = Form4.ds1
     Left = 76
     Top = 224
   end
@@ -207,6 +251,8 @@ object Form4: TForm4
   end
   object frxReport1: TfrxReport
     Version = '4.12.6'
+    DataSet = frxDBDataset1
+    DataSetName = 'frxDBDataset'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
