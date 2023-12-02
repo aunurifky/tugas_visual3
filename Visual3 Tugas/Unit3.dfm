@@ -187,7 +187,7 @@ object Form3: TForm3
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45100.702371041700000000
+    ReportOptions.LastChange = 45262.392590520800000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -232,7 +232,7 @@ object Form3: TForm3
           Font.Style = [fsBold]
           HAlign = haCenter
           Memo.UTF8 = (
-            'LAPORAN DATA USER')
+            'LAPORAN DATA DOSEN')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -241,39 +241,6 @@ object Form3: TForm3
         Height = 34.015770000000000000
         Top = 83.149660000000000000
         Width = 1511.812000000000000000
-        object Memo1: TfrxMemoView
-          Width = 79.370130000000000000
-          Height = 34.015770000000000000
-          ShowHint = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Times New Roman'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.UTF8 = (
-            'ID')
-          ParentFont = False
-          VAlign = vaCenter
-        end
-        object Memo3: TfrxMemoView
-          Left = 79.370130000000000000
-          Width = 98.267780000000000000
-          Height = 34.015770000000000000
-          ShowHint = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Times New Roman'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.UTF8 = (
-            'NAMA DOSEN')
-          ParentFont = False
-          VAlign = vaCenter
-        end
       end
       object MasterData1: TfrxMasterData
         Height = 71.811070000000000000
@@ -282,45 +249,84 @@ object Form3: TForm3
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset'
         RowCount = 0
-        object Memo2: TfrxMemoView
-          Width = 79.370130000000000000
-          Height = 71.811070000000000000
-          ShowHint = False
-          DataField = 'id'
-          DataSet = frxDBDataset1
-          DataSetName = 'frxDBDataset'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Times New Roman'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.UTF8 = (
-            '[frxDBDataset."id"]')
-          ParentFont = False
-          VAlign = vaCenter
-        end
-        object Memo4: TfrxMemoView
-          Left = 79.370130000000000000
-          Width = 98.267780000000000000
-          Height = 71.811070000000000000
-          ShowHint = False
-          DataField = 'nama_dosen'
-          DataSet = frxDBDataset1
-          DataSetName = 'frxDBDataset'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Times New Roman'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.UTF8 = (
-            '[frxDBDataset."nama_dosen"]')
-          ParentFont = False
-          VAlign = vaCenter
-        end
+      end
+      object Memo1: TfrxMemoView
+        Left = 411.968770000000000000
+        Top = 79.370130000000000000
+        Width = 86.929190000000000000
+        Height = 34.015770000000000000
+        ShowHint = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.UTF8 = (
+          'ID')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo3: TfrxMemoView
+        Left = 498.897960000000000000
+        Top = 79.370130000000000000
+        Width = 230.551330000000000000
+        Height = 34.015770000000000000
+        ShowHint = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.UTF8 = (
+          'NAMA DOSEN')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo2: TfrxMemoView
+        Left = 411.968770000000000000
+        Top = 173.858380000000000000
+        Width = 86.929190000000000000
+        Height = 71.811070000000000000
+        ShowHint = False
+        DataField = 'id'
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.UTF8 = (
+          '[frxDBDataset."id"]')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo4: TfrxMemoView
+        Left = 498.897960000000000000
+        Top = 173.858380000000000000
+        Width = 230.551330000000000000
+        Height = 71.811070000000000000
+        ShowHint = False
+        DataField = 'nama_dosen'
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.UTF8 = (
+          '[frxDBDataset."nama_dosen"]')
+        ParentFont = False
+        VAlign = vaCenter
       end
     end
   end

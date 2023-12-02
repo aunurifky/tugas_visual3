@@ -18,6 +18,7 @@ type
     zqry: TZQuery;
     ds: TDataSource;
     con: TZConnection;
+    Image1: TImage;
     procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
